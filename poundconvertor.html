@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pound Convertor</title>
+</head>
+
+<style>
+
+    body{
+        text-align: center;
+        background-color:black ;
+    }
+
+    h1{
+        background-color: rgb(55, 236, 55);
+        color: red;
+        font-weight: 900;
+        font-family: 'Russo One', sans-serif;
+    }
+
+    h2{
+        color: white;
+        background-color: blueviolet;
+        font-family: 'Staatliches', cursive;
+    }
+
+    .main-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+
+    .weight-type{
+        font-family: 'Merienda', cursive;
+    }
+
+    /* .top{
+        background-color:brown;
+    } */
+
+    #box{
+        background-color: rgb(87, 238, 238);
+        border: 2px solid white;
+        border-radius: 25px;
+    }
+
+
+</style>
+
+<body>
+
+    <div class="main-box">
+
+
+
+    <div id="box">
+
+        <div class="top">
+
+        <h1 class="h1">Weight Convertor</h1>
+
+    <h2 class="h2">Enter a value in Any of the feild to convert</h2>
+
+     </div>
+
+
+
+    <p>
+        <h3 class="weight-type">Pound</h3>
+        <input id="pond" type="number" placeholder="pound" oninput="poundConvert(value)">
+       
+    </p>
+
+
+    <p>
+        <h3 class="weight-type">kilogram</h3>
+        <input id="kg" type="number" placeholder="KiloGram" oninput="kgConvertor(value)">
+        </span>
+    </p>
+
+
+    <p>
+        <h3 class="weight-type">gram</h3>
+        <input id="gram" type="number" placeholder="gram">
+        
+    </p>
+
+
+    <p>
+        <h3 class="weight-type">stones</h3>
+        <input id="stone" type="number" placeholder="stones">
+        <span id="stone"></span>
+    </p>
+
+
+    <p>
+        <h3 class="weight-type">Ounces</h3>
+        <input id="ounes" type="number" placeholder="Ounces">
+        <span></span>
+    </p>
+
+    </div>
+
+</div>
+    
+</body>
+
+       <script>
+
+           function poundConvert(value){
+               document.getElementById('kg').value=value/2.2046;
+               document.getElementById('gram').value=value*0.0022046;
+               document.getElementById('ounes').value=value*16;
+               document.getElementById('stone').value=value*0.017429;
+               
+           }
+
+           function kgConvertor(value){
+               document.getElementById('pond').value=value*2.2046;
+               document.getElementById('gram').value=value*1000;
+               document.getElementById('ounes').value=value*35.274;
+               document.getElementById('stone').value=value*0.1574;
+
+           }
+
+       </script>
+
+</html>
